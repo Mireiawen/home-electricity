@@ -1,0 +1,14 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+chrome_dependencies:
+- "xvfb"
+- "xauth"
+- "xdg-utils"
+- "fonts-liberation"
+- "libappindicator3-1"
+- "libgbm1"
+- "libnspr4"
+- "libnss3"
+- "libxss1"
+chrome_deps_state: "latest"

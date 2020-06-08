@@ -1,0 +1,5 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+unzip_package: "unzip"
+unzip_state: "latest"

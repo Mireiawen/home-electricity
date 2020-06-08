@@ -1,0 +1,7 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- src: "mireiawen.locales"
+- src: "jnv.debian-backports"
+- src: "mireiawen.nodm"
+- src: "geerlingguy.pip"

@@ -1,0 +1,7 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- name: "Install unzip utility"
+  package:
+    name: "{{ unzip_package }}"
+    state: "{{ unzip_state }}"

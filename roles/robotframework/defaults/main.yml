@@ -1,0 +1,9 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+robotframework_package: "robotframework"
+robotframework_state: "latest"
+robotframework_pip: "pip3"
+robotframework_libraries:
+- "robotframework-seleniumlibrary"
+- "robotframework-xvfb"

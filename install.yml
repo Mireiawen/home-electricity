@@ -1,0 +1,54 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- hosts: "all"
+  become: true
+  vars:
+    ansible_python_interpreter: "auto_silent"
+  roles:
+
+  # Install the locales
+  - name: "mireiawen.locales"
+    locales:
+    - "en_US.UTF-8"
+    - "fi_FI.UTF-8"
+    tags:
+    - "locales"
+
+  # Debian and Ubuntu backports repository
+  - name: "jnv.debian-backports"
+    when: "ansible_distribution == 'Debian'
+           or ansible_distribution == 'Ubuntu'"
+    tags:
+    - "backports"
+
+  # Unzip
+  - name: "unzip"
+    tags:
+    - "utils"
+
+  # Chrome Dependencies
+  - name: "chrome-dependencies"
+    tags:
+    - "chrome"
+
+  # Python 2 PIP
+  - name: "geerlingguy.pip"
+    vars:
+      pip_package: "python-pip"
+      pip_executable: "pip"
+    tags:
+    - "pip"
+
+  # Python 3 PIP
+  - name: "geerlingguy.pip"
+    vars:
+      pip_package: "python3-pip"
+      pip_executable: "pip3"
+    tags:
+    - "pip"
+
+  # Robot Framework
+  - name: "robotframework"
+    tags:
+    - "robotframework"

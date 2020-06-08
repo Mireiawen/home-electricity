@@ -1,0 +1,7 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- name: "Install Chrome dependencies"
+  package:
+    name: "{{ chrome_dependencies }}"
+    state: "{{ chrome_deps_state }}"
