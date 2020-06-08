@@ -1,0 +1,14 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- name: "Install Robot Framework"
+  pip:
+    name: "{{ robotframework_package }}"
+    state: "{{ robotframework_state }}"
+    executable: "{{ robotframework_pip }}"
+
+- name: "Install Robot Framework libraries"
+  pip:
+    name: "{{ robotframework_libraries }}"
+    state: "{{ robotframework_state }}"
+    executable: "{{ robotframework_pip }}"
