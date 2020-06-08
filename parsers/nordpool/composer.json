@@ -1,0 +1,29 @@
+{
+	"name": "mireiawen/nordpool-data",
+	"description": "Parse Nordpool Day-ahead price Excel to InfluxDB",
+	"type": "project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Mira Manninen",
+			"email": "mir@mireiawen.net"
+		}
+	],
+	"require": {
+		"php": ">=7.3.0",
+		"ext-gettext": "*",
+		"ext-dom": "*",
+		"influxdb/influxdb-php": "^1.15",
+		"ulrichsg/getopt-php": "^3.3",
+		"mireiawen/input": "^1.1.0",
+		"phpoffice/phpspreadsheet": "^1.13"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Mireiawen\\Nordpool\\": "includes"
+		}
+	}
+}
