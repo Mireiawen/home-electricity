@@ -1,10 +1,10 @@
 *** Settings ***
-Documentation     Download the Nordpool day-ahead market data with Chrome and upload to remote server with SCP
+Documentation     Download the Nordpool day-ahead market data with Chrome
 Resource          resource.robot
-Resource          ../secrets.robot
 
 *** Test Cases ***
 Download the Sheet
+    Start Virtual Display  1920  1080
     Open Download Page
     Accept Cookies
     Acknowledge Notification
@@ -13,11 +13,3 @@ Download the Sheet
     Click Download
     Sleep  5s
     Close Browser
-
-Upload the Sheet
-    Open Connection  ${SCP_HOST}  username=${SCP_USER}
-    Put File         ${LOCAL_SHEET}  ${SCP_SHEET}
-    Close Connection
-
-Remove the Sheet
-    Remove File      ${LOCAL_SHEET}

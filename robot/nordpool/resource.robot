@@ -1,9 +1,7 @@
 *** Settings ***
 Documentation     A resource file with reusable keywords and variables.
 Library           SeleniumLibrary
-Library           Collections
-Library           SCPLibrary
-Library           OperatingSystem
+Library           XvfbRobot
 
 *** Variables ***
 ${BROWSER}        Chrome
