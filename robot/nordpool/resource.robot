@@ -25,3 +25,6 @@ Acknowledge Notification
 
 Click Download
     Click Element  class:export-xls
+
+Clean Up
+    Close Browser
