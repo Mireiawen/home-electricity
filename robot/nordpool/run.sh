@@ -10,6 +10,7 @@ REPORT_DESTINATION="/mnt/reports/Day-ahead prices.xls"
 
 # Clean up the possible old temporary download file
 rm -f "${REPORT_FILE}"
+rm -rf "/tmp/.com.google.Chrome."*
 
 # Run the tasks
 pushd "${SCRIPT_DIR}" >>'/dev/null'
