@@ -1,0 +1,27 @@
+{
+    "name": "mireiawen/lumme-data",
+    "description": "Parse Lumme Energia usage CSV to InfluxDB",
+	"type": "project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Mira Manninen",
+			"email": "mir@mireiawen.net"
+		}
+	],
+	"require": {
+		"php": ">=7.3.0",
+		"ext-gettext": "*",
+		"influxdb/influxdb-php": "^1.15",
+		"ulrichsg/getopt-php": "^3.3",
+		"mireiawen/input": "^1.1.0"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+            "Mireiawen\\Lumme\\": "includes"
+		}
+	}
+}

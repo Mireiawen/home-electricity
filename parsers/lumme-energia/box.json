@@ -1,0 +1,15 @@
+{
+    "chmod": "0755",
+    "main": "lumme-energia.php",
+    "output": "lumme-energia.phar",
+
+    "directories": ["includes"],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": ["test", "tests"],
+            "in": "vendor"
+         }
+    ],
+    "stub": true
+}
