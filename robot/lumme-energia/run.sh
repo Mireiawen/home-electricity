@@ -9,7 +9,7 @@ REPORT_FILE="${HOME}/Downloads/report.csv"
 REPORT_DESTINATION="/mnt/reports/report.csv"
 
 # Build the date to click
-LUMME_DATE="${LUMME_DATE:-"$(date --utc --date '2 days ago' '+%Y-%m-%d')"}"
+LUMME_DATE="${LUMME_DATE:-"$(date --utc --date '1 day ago' '+%Y-%m-%d')"}"
 
 # Clean up the possible old temporary download file
 rm -f "${REPORT_FILE}"
