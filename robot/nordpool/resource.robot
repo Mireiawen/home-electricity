@@ -27,4 +27,5 @@ Click Download
     Click Element  class:export-xls
 
 Clean Up
+    Sleep  10s
     Close Browser
