@@ -155,7 +155,6 @@ class Application
 	 * The main application constructor
 	 *
 	 * @param string $input_filename
-	 *
 	 */
 	public function __construct(string $input_filename)
 	{
