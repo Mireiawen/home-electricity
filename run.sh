@@ -10,22 +10,18 @@ NORDPOOL_REPORT='reports/Day-ahead prices.xls'
 # The loaded Lumme-Energiea report
 LUMME_REPORT='reports/report.csv'
 
-# Run Nordpool scripts
-NORDPOOL="${NORDPOOL:-"1"}"
-
-# Run Lumme-Energia scripts
-LUMME_ENERGIA="${LUMME_ENERGIA:-"1"}"
-
-# The default name for the InfluxDB container
-INFLUXDB_CONTAINER="influxdb"
-
 # Determine the directory with files
 SCRIPT_DIR="$(dirname "$(cd "${0%/*}" 2>'/dev/null'; echo "${PWD}"/"${0##*/}")")"
 pushd "${SCRIPT_DIR}" >>'/dev/null'
 
-# Load the secrets
+# Load the defaults and secrets
 set -a
-source 'secrets'
+source 'defaults'
+
+if [ -f 'secrets' ]
+then
+	source 'secrets'
+fi
 set +a
 
 if [ "${NORDPOOL}" != '0' ]

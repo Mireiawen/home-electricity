@@ -1,0 +1,23 @@
+# The local networks for Traefik whitelisting
+LOCAL_NETWORK="192.168.0.0/16"
+
+# Database definitions
+INFLUXDB_DATABASE_NORDPOOL="nordpool"
+INFLUXDB_DATABASE_LUMME="lumme"
+
+# InfluxDB container settings
+INFLUXDB_VOLUME="influxdb"
+INFLUXDB_CONTAINER="influxdb"
+
+# InfluxDB connection settings
+# These settings expect the InfluxDB to be found 
+# behind Traefik hosting SSL with the systems domain name
+INFLUXDB_HOSTNAME="${INFLUXDB_CONTAINER}.$(hostname --domain)"
+INFLUXDB_PORT="443"
+INFLUXDB_SSL="1"
+
+# Run Nordpool scripts
+NORDPOOL="1"
+
+# Run Lumme-Energia scripts
+LUMME_ENERGIA="1"

@@ -1,22 +1,18 @@
 #!/bin/bash
 set -e
 
-# Set the defaults
-INFLUXDB_VOLUME="influxdb"
-INFLUXDB_CONTAINER="influxdb"
-LOCAL_NETWORK="192.168.0.0/16"
-
 # Determine the directory with files
 SCRIPT_DIR="$(dirname "$(cd "${0%/*}" 2>'/dev/null'; echo "${PWD}"/"${0##*/}")")"
 pushd "${SCRIPT_DIR}" >>'/dev/null'
 
-# Load the secrets if it exists
+# Load the defaults and secrets
+set -a
+source 'defaults'
 if [ -f 'secrets' ]
 then
-	set -a
 	source 'secrets'
-	set +a
 fi
+set +a
 
 popd >>'/dev/null'
 
