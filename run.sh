@@ -58,6 +58,7 @@ state="running"
 # Start the robot machine if it is not up
 if [ "${state}" != 'running' ]
 then
+	bash "ansible-roles.sh"
 	vagrant 'up' "${MACHINE}"
 fi
 
