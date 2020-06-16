@@ -42,10 +42,13 @@ then
 	fi
 fi
 
-# Make sure the database container is up
-if [ -z "$(docker 'ps' --quiet --filter "name=^${INFLUXDB_CONTAINER}")" ]
+if [ "${INFLUXDB_CUSTOM}" == '0' ]
 then
-	bash 'database.sh'
+	# Make sure the database container is up
+	if [ -z "$(docker 'ps' --quiet --filter "name=^${INFLUXDB_CONTAINER}")" ]
+	then
+		bash 'database.sh'
+	fi
 fi
 
 # Get the robot machine status

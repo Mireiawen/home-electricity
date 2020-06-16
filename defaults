@@ -12,6 +12,7 @@ INFLUXDB_CONTAINER="influxdb"
 # InfluxDB connection settings
 # These settings expect the InfluxDB to be found 
 # behind Traefik hosting SSL with the systems domain name
+INFLUXDB_CUSTOM="0"
 INFLUXDB_HOSTNAME="${INFLUXDB_CONTAINER}.$(hostname --domain)"
 INFLUXDB_PORT="443"
 INFLUXDB_SSL="1"
