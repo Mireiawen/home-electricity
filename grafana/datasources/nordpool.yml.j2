@@ -1,0 +1,13 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+apiVersion: 1
+datasources:
+- name: "Nordpool"
+  version: 1
+  editable: false
+  orgId: 1
+  type: "influxdb"
+  access: "direct"
+  url: "{{ INFLUXDB_URL }}"
+  database: "{{ INFLUXDB_DATABASE_NORDPOOL }}"
