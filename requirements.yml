@@ -3,5 +3,4 @@
 
 - src: "mireiawen.locales"
 - src: "jnv.debian-backports"
-- src: "mireiawen.nodm"
 - src: "geerlingguy.pip"
