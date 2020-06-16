@@ -1,6 +1,10 @@
 # The local networks for Traefik whitelisting
 LOCAL_NETWORK="192.168.0.0/16"
 
+# Lumme Energia account
+LUMME_USER_ID=""
+LUMME_PASSWORD=""
+
 # Database definitions
 INFLUXDB_DATABASE_NORDPOOL="nordpool"
 INFLUXDB_DATABASE_LUMME="lumme"
