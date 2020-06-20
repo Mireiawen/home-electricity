@@ -56,7 +56,6 @@ state="$(vagrant 'status' "${MACHINE}" \
 	--machine-readable |\
 	grep -Ee ",${MACHINE},state,[a-z]+$" |\
 	cut --delim ',' --field '4')"
-state="running"
 
 # Start the robot machine if it is not up
 if [ "${state}" != 'running' ]
