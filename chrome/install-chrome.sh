@@ -2,12 +2,12 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-# Downloaded from https://www.google.com/chrome/
-CHROME_VERSION="83.0.4103.97"
+# Downloaded from https://www.google.com/chrome/?platform=linux
+CHROME_VERSION="87.0.4280.66-1"
 
 # Downloaded from https://sites.google.com/a/chromium.org/chromedriver/downloads
 # Major version must match the Chrome major version
-CHROMEDRIVER_VERSION="83.0.4103.39"
+CHROMEDRIVER_VERSION="87.0.4280.20"
 
 # Get the current Chrome version
 if [ -n "$(which 'google-chrome')" ]
