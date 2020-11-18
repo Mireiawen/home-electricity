@@ -9,11 +9,13 @@ Start the Display
 
 Open the Page
     Open Download Page
+    Sleep  4 minutes
     Accept Cookies
+    Sleep  10 seconds
     Acknowledge Notification
-    Sleep  2s
+    Sleep  10 seconds
     Acknowledge Notification
-    Sleep  1s
+    Sleep  10 seconds
 
 Download the Sheet
     Click Download
