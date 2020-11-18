@@ -1,5 +1,6 @@
 #!/bin/bash
-set -e
+set -euo pipefail
+IFS=$'\n\t'
 
 # Downloaded from https://www.google.com/chrome/
 CHROME_VERSION="83.0.4103.97"
